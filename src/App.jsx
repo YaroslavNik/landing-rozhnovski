@@ -1,9 +1,10 @@
 import './assets/styles/Common.sass'
+import AboutUs from './pages/AboutUs';
 
 const App = () => {
   return (
-    <div className = "container">
-      
+    <div className = "root">
+        <AboutUs/>
     </div>
   );
 }

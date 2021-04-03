@@ -1,1 +1,32 @@
 @import './Reset'
+
+.container
+    max-width: 1280px
+    margin: auto
+    padding: 0 5%
+    box-sizing: content-box
+
+.flex-row
+    display: flex
+    flex-direction: row
+    width: 100%
+
+.btn-yellow
+    background-color: #E8C300
+    color: white
+    border: none
+
+    &:hover
+        background-color: inherit
+        color: #E8C300
+        border: 1px solid #E8C300
+
+.btn-transparent
+    background-color: inherit
+    color: white
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    
+    &:hover
+        background-color: #E8C300
+        color: white
+        border: none
