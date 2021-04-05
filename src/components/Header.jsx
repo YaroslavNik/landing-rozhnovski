@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <div className = {`${styles.root} flex-row`}>
             <div className = {`${styles.menu} flex-row`}>
-                {links.map(el => <Link className = {styles.link} exact key = {el} to = {`/${el}`}>{el}</Link>)}
+                {links.map(el => <Link className = {styles.link} key = {el} to = {`/${el}`}>{el}</Link>)}
             </div>
         </div>
     )
