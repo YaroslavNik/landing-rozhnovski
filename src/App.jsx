@@ -1,10 +1,12 @@
 import './assets/styles/Common.sass'
 import AboutUs from './pages/AboutUs';
+import Brand from './pages/Brand';
 
 const App = () => {
   return (
     <div className = "root">
-        <AboutUs/>
+      <Brand/>
+      <AboutUs/>
     </div>
   );
 }
