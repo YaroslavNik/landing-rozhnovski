@@ -16,37 +16,28 @@ const settings = {
     arrows: false
 };
 
-const Gallary = () => {
+const Gallary = ({data, title, background}) => {
 
-    const styles = useStyles()
+    const styles = useStyles({background})
+
 
     return (
         <div className = {`${styles.wrapper} wrapper`}>
             <div className = {`${styles.root} container`}>
-                <h2 className = 'pages-title'>Gallary</h2>
+                <h2 className = 'pages-title'>{title}</h2>
                 <Slider {...settings} className = {styles.slider}>
-
-                    <div className = {`${styles.slide}`}>
-                        <img src = {`${SliderImg1}`}/>
-                        <Article
-                            title = {team.title}
-                            description = {team.description}
-                            text = {team.text}
-                            textColor = 'white'
-                            float = 'right'
-                        />
-                    </div>
-
-                    <div className = {`${styles.slide}`}>
-                        <img src = {`${SliderImg2}`}/>
-                        <Article
-                            title = {aboutUs.title}
-                            description = {aboutUs.description}
-                            text = {aboutUs.text}
-                            textColor = 'white'
-                            float = 'right'
-                        />
-                    </div>
+                    {data.map(item => 
+                        <div className = {`${styles.slide}`} key = {item.title}>
+                            <img src = {item.img}/>
+                            <Article
+                                title = {item.title}
+                                description = {item.description}
+                                text = {item.text}
+                                textColor = 'white'
+                                float = 'right'
+                            />
+                        </div>
+                    )}
 
                 </Slider>
             </div>
@@ -55,16 +46,21 @@ const Gallary = () => {
 }
 
 const useStyles = createUseStyles({
-    wrapper: {
-        background: `url(${BackgroundImg}) center no-repeat`,
+    wrapper: ({background}) => ({
+        background: `url(${background}) center no-repeat`,
         backgroundSize: 'cover',
         paddingBottom: '30px'
-    },
+    }),
 
     slide: {
         height: '602px',
         alignItems: 'center',
-        display: 'flex !important'
+        display: 'flex !important',
+
+        '& > img': {
+            maxWidth: '500px',
+            objectFit: 'cover'
+        }
     },
 
     slider: {

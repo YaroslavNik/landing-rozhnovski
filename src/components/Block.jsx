@@ -1,21 +1,18 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss';
-import AboutUsImg from '../assets/images/logo.jpeg'
-import {ReactComponent as BoxImg} from '../assets/images/aboutUsBox.svg'
-import Article from '../components/Article';
-import { aboutUs } from '../data/text';
+import Article from './Article';
 
-const AboutUs = () => {
+const Block = ({block, image}) => {
 
-    const styles = useStyles()
+    const styles = useStyles({image})
 
     return (
         <div>
         <div className = {`${styles.root} container flex-row`}>
            <Article
-                title = {aboutUs.title}
-                description = {aboutUs.description}
-                text = {aboutUs.text}        
+                title = {block.title}
+                description = {block.description}
+                text = {block.text}        
                 textColor = 'black'
                 float = 'left'   
            />
@@ -32,10 +29,10 @@ const useStyles = createUseStyles({
         alignItems: 'center',
     },
 
-    images: {
-        background: `url(${AboutUsImg}) center no-repeat`,
+    images: ({image}) => ({
+        background: `url(${image}) center no-repeat`,
         backgroundSize: 'contain',
-    }
+    })
 })
 
-export default AboutUs
+export default Block

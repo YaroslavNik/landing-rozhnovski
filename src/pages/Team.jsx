@@ -3,7 +3,7 @@ import Article from '../components/Article'
 import { team } from '../data/text'
 import { createUseStyles } from 'react-jss';
 import BackgroundImg from '../assets/images/bgTeam.jpeg'
-import TeamImg from '../assets/images/team.jpeg'
+import TeamImg from '../assets/images/TeamPhotos/Pavel.jpeg'
 
 const Team = () => {
 
@@ -47,6 +47,7 @@ const useStyles = createUseStyles({
 
     images: {
         background: `url(${TeamImg}) center no-repeat`,
+        backgroundSize: 'cover',
     }
 })
 

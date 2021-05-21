@@ -10,7 +10,7 @@ const DishesMenu = () => {
         <div className = {`${styles.root} container`}>
 
             <div className = {styles.title}>
-                <h2 className = 'article-title'>Delisios Menu</h2>
+                <h2 className = 'article-title'>Наши услуги</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
             </div>
 
@@ -22,10 +22,10 @@ const DishesMenu = () => {
                 {Array.from({length: 21}).map((el, index) => 
                     <div key = {index} className = {styles.filterItem}>
                         <p className = {styles.filterItemTitle}>
-                            <h4>PIZZA QUATRO STAGIONI. . . .</h4>
+                            <h4>Услуга</h4>
                             <span>55,68 USD</span>
                         </p>
-                        <p className = {styles.filterItemDescription}>Integer ullamcorper neque eu purus euismod</p>
+                        <p className = {styles.filterItemDescription}>Описание услуги</p>
                     </div>
                 )}
             </div>
@@ -64,12 +64,15 @@ const useStyles = createUseStyles({
 
         '& > h3': {
             width: `${100/length}%`,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             textAlign: 'center',
             color: '#333333',
-            fontSize: '12px',
-            lineHeight: '50px',
+            fontSize: '13px',
+            lineHeight: '16px',
             fontWeight: 'bold',
-            height: '50px',
+            height: '36px',
             cursor: 'pointer',
             position: 'relative',
 
@@ -94,7 +97,8 @@ const useStyles = createUseStyles({
     },
 
     filterItem: {
-        flexBasis: '33.33%',
+        flexBasis: '33.3%',
+        padding: '0 20px',
         paddingBottom: '20px',
         color: '#333333',
     },
@@ -104,6 +108,7 @@ const useStyles = createUseStyles({
         fontSize: '18px',
         lineHeight: '18px',
         fontWeight: 'bold',
+        justifyContent: 'space-between',
         
         '& > h4': {
             marginRight: '10px'

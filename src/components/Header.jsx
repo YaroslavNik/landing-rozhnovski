@@ -2,7 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss';
 import {Link} from 'react-router-dom'
 
-const links = ['Home', 'About', 'Team', 'Booking', 'Menu', 'Galarie', 'Events', 'Contacts']
+const links = ['Home', 'About', 'Team', 'Booking', 'Training', 'Galarie', 'Services', 'Contacts']
 
 const Header = () => {
 

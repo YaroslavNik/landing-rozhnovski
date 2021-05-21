@@ -1,7 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss';
 import Header from '../components/Header';
-import BackgroundImg from '../assets/images/bgAbout.jpeg'
+import BackgroundImg from '../assets/images/bgHorses.jpg'
 import Button from '../common/Button';
 import {ReactComponent as FacebookImg} from '../assets/images/iconFacebook.svg'
 import {ReactComponent as TwitterImg} from '../assets/images/iconTwitter.svg'
@@ -20,11 +20,11 @@ const Brand = () => {
                         <p>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</p>
                     </div>
                     <div className = {styles.title}>
-                        <span>RESTAURANT</span>
-                        <h1>hungry people</h1>
+                        <span>Конно-спортивный клуб</span>
+                        <h1>Рожновский</h1>
                         <div className = {`${styles.buttons} flex-row`}>
-                            <Button label = 'Book Table' className = 'btn-yellow' maxWidth = '200px'/>
-                            <Button label = 'Explore' className = 'btn-transparent' maxWidth = '200px'/>
+                            <Button label = 'Забронировать постой' className = 'btn-yellow' maxWidth = '200px'/>
+                            <Button label = 'More' className = 'btn-transparent' maxWidth = '200px'/>
                         </div>
                     </div>
                     <div className = {styles.links}>

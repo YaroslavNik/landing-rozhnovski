@@ -33,8 +33,9 @@ const useStyles = createUseStyles({
         },
 
         '& > p': {
-            fontSize: '14px',
+            fontSize: '16px',
             lineHeight: '24px',
+            textAlign: 'left'
         }
     }),
 })
